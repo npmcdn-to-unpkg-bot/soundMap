@@ -9,7 +9,6 @@ var GMap = React.createClass({
       markers : []
     };
   },
-
   // set some default values
   getDefaultProps: function() {
     return {
@@ -28,7 +27,7 @@ var GMap = React.createClass({
   handleMarkerClick: function(i,e) {
     this.props.onClick(i);
   },
-  
+
   updateZoom: function (newZoom) {
     this.state.map.setZoom(newZoom);
   },
@@ -37,16 +36,16 @@ var GMap = React.createClass({
     var newCenter = new google.maps.LatLng(newLat, newLon)
     this.state.map.setCenter(newCenter);
   },
-  
+
   // update geo-encoded markers
   updateMarkers : function(points) {
 
     var markers = this.state.markers;
     var map = this.state.map;
-    
+
     // map may not be loaded when parent component re-renders
     if(map === null) { return false; }
-    
+
     // remove everything
     markers.forEach( function(marker) {
       marker.setMap(null);
@@ -64,7 +63,7 @@ var GMap = React.createClass({
 
       //add click listener
       google.maps.event.addListener(marker, 'click', this.handleMarkerClick.bind(null,i));
-      
+
       //center map on clicked Sound - marker
       if(point.animation === 1){
         this.updateCenter(point.latitude,point.longitude);
@@ -115,7 +114,7 @@ var GMap = React.createClass({
         var s =document.createElement('script');
         s.src = 'https://maps.googleapis.com/maps/api/js?key=' + this.props.gmaps_api_key + '&sensor=' + this.props.gmaps_sensor + '&callback=reactMapCallback';
         document.head.appendChild( s );
-        
+
         // when the script has loaded, run all the callbacks
         window.reactMapCallbacks = [];
         window.reactMapCallback = function(){

@@ -41,7 +41,7 @@ var MyMap = React.createClass({
     div.scrollIntoView(true);
   },
   render : function() {
-    
+
     var points = this.props.tracks.map(function(track,i){
       return {
         latitude: this.getGps(track).lat,
@@ -49,11 +49,11 @@ var MyMap = React.createClass({
         animation: (this.state.selectedMarker === i) ? 1 : 0
       };
     },this);
-    
+
     return(
       <div id="Map">
-        GPS: {this.state.Center.lat}-{this.state.Center.lng} - selected: {this.state.selectedMarker}
-        <GMap 
+        momo GPS: {this.state.Center.lat}-{this.state.Center.lng} - selected: {this.state.selectedMarker}
+        <GMap
           latitude={this.state.Center.lat}
           longitude={this.state.Center.lng}
           selected={this.state.selectedMarker}

@@ -28,7 +28,7 @@ var Sound = React.createClass({
         backgroundColor: playing_bool ? "#FFC800" : ""
     };
     var selectedClass;
-    
+
     if (this.props.isSelected && this.props.isHoveredOver)  {
       selectedClass = "row selected";
     } else if (this.props.isSelected) {
@@ -38,29 +38,27 @@ var Sound = React.createClass({
     } else {
       selectedClass = "row";
     }
-    
     return (
-      <div id={"Snd"+this.props.number} onClick={this._onSelectClick}>            
+      <div id={"Snd"+this.props.number} onClick={this._onSelectClick}>
         <div id="Sound" className={selectedClass}
           onMouseEnter={this.props.onMouseEnter}
           onMouseLeave={this.props.onMouseLeave}>
-          <img 
-            className="imgButton" 
+          <img
+            className="imgButton"
             src={this.props.artwork_url}
             alt="artwork">
           </img>
-          <h6 className="title"> 
+          <h5 className="title">
             {this.props.title}
-          </h6>
-
-          <a 
+          </h5>
+          <a
             className="button myButton"
             href="#"
             onClick={this._onPlayClick}
             style={playStyle}>
             {playText}
           </a>
-          <img 
+          <img
             className={waveClass}
             src={this.props.waveform_url}
             alt="waveform">

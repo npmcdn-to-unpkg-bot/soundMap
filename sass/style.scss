@@ -18,7 +18,7 @@
 ================================================== */
 body {
   background: #fff;
-  font: 12px/18px $body_font_family;
+  font: 14px/18px $body_font_family;
   color: #444;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
@@ -43,35 +43,35 @@ body {
   background-color: white;
   top:0;
   bottom:0;
-  right:400px;
+  right:500px;
   left:0;
   overflow:hidden;
-  
+
 }
 
 #SoundList {
-  
-  width: 400px;
+
+  width: 500px;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   overflow-y: scroll;
   overflow-x: hidden;
-  
+
   #Sound {
-    
+
     border: 1px solid #999;
     border-radius: 5px;
     padding: 2px;
     margin-top: 1px;
 
     .imgButton {
-      
+
       &:hover {
         border: 1px solid #333;
       }
-      
+
       cursor: pointer;
       border: 1px solid #999;
       border-radius: 27px;
@@ -83,7 +83,7 @@ body {
     }
 
     .title {
-      max-width: 200px;
+      max-width: 350px;
       float: left;
       margin-left: 3px;
       margin-top: 3px;
@@ -91,22 +91,22 @@ body {
     }
 
     .myButton {
-      
+
       &:hover {
         background-color: #FFFF00;
       }
-      
+
       background-color: #F5F5F5;
       background-image: none;
       float: right;
       margin: 3px 2px;
       padding: 6px;
     }
-    
+
     .waveform-hide {
-      display: none; 
+      display: none;
     }
-    
+
     .waveform-show {
       display: block;
       margin: 0 0 0 -1px;
@@ -118,20 +118,20 @@ body {
       width: 100%;
       background-color: #333;
     }
-  
+
   }
-  
+
   .selected {
     background-color: #79DCED;
   }
-  
+
   .hovered {
-    background-color: #e3e3e3;
+    background-color: #d3d3d3;
   }
 
   .desc {
-    margin-top: 1px;
-    padding: 0 5px 0 5px;
+    margin-top: 0;
+    padding: 2px 5px 0 5px;
     border: 1px solid #999;
     border-radius: 5px;
     cursor: pointer;
@@ -141,7 +141,7 @@ body {
     word-break: break-all;
     word-wrap: break-word;
   }
-  
+
   .infoShow {
     display: block;
   }

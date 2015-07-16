@@ -5,7 +5,8 @@ var gulp = require('gulp')
   , uglify = require('gulp-uglify')
   , cssmin = require('gulp-cssmin')
   , rename = require('gulp-rename')
-  , watch = require('gulp-watch');
+  , watch = require('gulp-watch')
+  , server = require('gulp-express');
 
 gulp.task('scripts', function () {
   gulp.src(['app/main.js'])
@@ -13,7 +14,7 @@ gulp.task('scripts', function () {
       debug: true,
       transform: [ 'reactify' ]
     }))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./public/'));
 });
@@ -28,8 +29,12 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function() {
+  server.run(['server.js'])
+  gulp.watch(['./public/**'], server.notify);
   gulp.watch('./app/**', ['scripts']);
   gulp.watch('./sass/**', ['styles']);
+  gulp.watch('./server.js', [server.run]);
+
 });
 
 gulp.task('default', ['scripts','styles']);
