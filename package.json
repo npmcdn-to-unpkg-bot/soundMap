@@ -4,7 +4,7 @@
   "description": "soundcloud/googlemaps mashup with fieldrecordings",
   "main": "server.js",
   "author": "endziu",
-  "repository": "endziu/soundMap2",
+  "repository": "endziu/soundMap",
   "licence": "BSD",
   "dependencies": {
     "body-parser": "^1.13.1",

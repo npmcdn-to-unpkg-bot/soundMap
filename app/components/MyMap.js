@@ -52,7 +52,7 @@ var MyMap = React.createClass({
 
     return(
       <div id="Map">
-        momo GPS: {this.state.Center.lat}-{this.state.Center.lng} - selected: {this.state.selectedMarker}
+        GPS: {this.state.Center.lat}-{this.state.Center.lng} - selected: {this.state.selectedMarker}
         <GMap
           latitude={this.state.Center.lat}
           longitude={this.state.Center.lng}
