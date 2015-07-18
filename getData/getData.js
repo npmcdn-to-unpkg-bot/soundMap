@@ -1,6 +1,6 @@
-var _ = require('lodash')
-var request = require('request')
-var ID = '33c73dacce84dddddbc15117e071b6ce'
+var _ = require('lodash');
+var request = require('request');
+var ID = '33c73dacce84dddddbc15117e071b6ce';
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
@@ -22,26 +22,26 @@ function shuffle(array) {
 }
 
 function getGroupInfo(callback) {
-  var group_url = 'http://api.soundcloud.com/groups/51127.json?client_id=' + ID
-  var groupInfo = {}
+  var group_url = 'http://api.soundcloud.com/groups/51127.json?client_id=' + ID;
+  var groupInfo = {};
   request.get(group_url, function(err,res,data){ 
-    if (err) throw err
-    var data = JSON.parse(data)
+    if (err) throw err;
+    var data = JSON.parse(data);
     _.forEach(data, function(val,key){
-      groupInfo[key] = val
-    })
-    return callback(null, groupInfo)
-  })
+      groupInfo[key] = val;
+    });
+    return callback(null, groupInfo);
+  });
 }
 
 function getTracks(callback) {
-  var tracks_url = 'http://api.soundcloud.com/groups/51127/tracks.json?client_id=' + ID + '&limit=200'
-  var tracks = []
+  var tracks_url = 'http://api.soundcloud.com/groups/51127/tracks.json?client_id=' + ID + '&limit=200';
+  var tracks = [];
 
   request.get(tracks_url, function(err,res,data){
-    if (err) throw err
+    if (err) throw err;
     //var data = shuffle(JSON.parse(data))
-    var data = JSON.parse(data)
+    var data = JSON.parse(data);
     _.forEach(data, function(val,key){
       tracks[key] = {
         id: val.id,
@@ -54,10 +54,10 @@ function getTracks(callback) {
         duration: val.duration,
         stream_url: val.stream_url,
         description: val.description
-      }
-    })
-    return callback(null, tracks)
-  }) 
+      };
+    });
+    return callback(null, tracks);
+  }) ;
 }
 
 module.exports = {
