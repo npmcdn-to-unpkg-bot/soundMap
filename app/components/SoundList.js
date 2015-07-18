@@ -6,7 +6,7 @@ var SoundList = React.createClass({
     this.props.handleHover(i);
   },
   _onItemMouseOut: function(i,event){
-    //this.props.handleHover(null);
+    this.props.handleHover(null);
   },
   _onPlayClick: function(i) {
     this.props.handlePlay(i);

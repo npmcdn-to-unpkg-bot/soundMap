@@ -2,16 +2,6 @@ var React = require('react');
 
 ///////////////////////////////////////////
 var Sound = React.createClass({
-  getInitialState: function() {
-    return {
-      displayInfo: false
-    };
-  },
-  _onInfoClick: function() {
-    this.setState({
-      displayInfo: !this.state.displayInfo
-    });
-  },
   _onPlayClick: function() {
     this.props.onPlayClick();
   },
@@ -20,15 +10,12 @@ var Sound = React.createClass({
   },
   render: function() {
     //console.log('Sound: ', this.state);
-    var infoClass = this.props.isSelected ? "infoShow" : "infoHide";
     var playing_bool = this.props.isPlaying;
     var playText = playing_bool ? "stop" : "play";
+    
     var waveClass = playing_bool ? "waveform-show" : "waveform-hide";
-    var playStyle = {
-        backgroundColor: playing_bool ? "#FFC800" : ""
-    };
+    
     var selectedClass;
-
     if (this.props.isSelected && this.props.isHoveredOver)  {
       selectedClass = "row selected";
     } else if (this.props.isSelected) {
@@ -38,6 +25,7 @@ var Sound = React.createClass({
     } else {
       selectedClass = "row";
     }
+    
     return (
       <div id={"Snd"+this.props.number} onClick={this._onSelectClick}>
         <div id="Sound" className={selectedClass}
@@ -54,8 +42,7 @@ var Sound = React.createClass({
           <a
             className="button myButton"
             href="#"
-            onClick={this._onPlayClick}
-            style={playStyle}>
+            onClick={this._onPlayClick}>
             {playText}
           </a>
           <img
@@ -63,11 +50,6 @@ var Sound = React.createClass({
             src={this.props.waveform_url}
             alt="waveform">
           </img>
-        </div>
-        <div className={infoClass}>
-          <p className="desc">
-            {this.props.description}
-          </p>
         </div>
     </div>
     );

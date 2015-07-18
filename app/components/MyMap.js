@@ -37,7 +37,7 @@ var MyMap = React.createClass({
   },
   onClick: function(i) {
     this.props.onClick(i);
-    var div = document.getElementById("Snd"+i)
+    var div = document.getElementById("Snd"+i);
     div.scrollIntoView(true);
   },
   render : function() {
