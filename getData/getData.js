@@ -52,7 +52,7 @@ function getTracks(callback) {
         artwork_url: val.artwork_url || "https://i1.sndcdn.com/avatars-000003754197-qxr8rw-large.jpg",
         waveform_url: val.waveform_url,
         duration: val.duration,
-        stream_url: val.stream_url,
+        stream_url: 'https://soundcloud.com/' + val.user.username.replace(/\s+/g, '') + '/' + val.permalink, //str = str.replace(/\s+/g, '');
         description: val.description
       };
     });

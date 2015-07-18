@@ -10,10 +10,6 @@ var Sound = React.createClass({
   },
   render: function() {
     //console.log('Sound: ', this.state);
-    var playing_bool = this.props.isPlaying;
-    var playText = playing_bool ? "stop" : "play";
-    
-    var waveClass = playing_bool ? "waveform-show" : "waveform-hide";
     
     var selectedClass;
     if (this.props.isSelected && this.props.isHoveredOver)  {
@@ -39,17 +35,6 @@ var Sound = React.createClass({
           <h5 className="title">
             {this.props.title}
           </h5>
-          <a
-            className="button myButton"
-            href="#"
-            onClick={this._onPlayClick}>
-            {playText}
-          </a>
-          <img
-            className={waveClass}
-            src={this.props.waveform_url}
-            alt="waveform">
-          </img>
         </div>
     </div>
     );

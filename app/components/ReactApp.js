@@ -6,6 +6,7 @@ var tracks = require('../data/tracksList.json');
 var SoundList = require('./SoundList.js');
 var Sound = require('./Sound.js');
 var MyMap = require('./MyMap.js');
+var SoundCloud = require('react-soundcloud-widget');
 
 //////////////////////////////////////////
 var ReactApp = React.createClass({
@@ -64,6 +65,10 @@ var ReactApp = React.createClass({
           tracks={this.state.tracks}
           selectedMarker={this.state.selectedItem}
           onClick={this._onClick}/>
+        <div id="Player">
+          <SoundCloud 
+            url={tracks[this.state.selectedItem].stream_url}/>
+        </div>
       </div>
     );
   }

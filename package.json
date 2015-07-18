@@ -13,7 +13,7 @@
     "express": "^4.13.0",
     "path": "*",
     "react": "^0.13.3",
-    "require-sdk": "0.0.2"
+    "react-soundcloud-widget": "^2.0.1"
   },
   "devDependencies": {
     "babelify": "^6.1.3",
