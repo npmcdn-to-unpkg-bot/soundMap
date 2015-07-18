@@ -69,6 +69,9 @@ var ReactApp = React.createClass({
           <SoundCloud 
             url={tracks[this.state.selectedItem].stream_url}/>
         </div>
+        <div id="Info">
+        INFOOOO
+        </div>
       </div>
     );
   }

@@ -42,6 +42,7 @@ function getTracks(callback) {
     if (err) throw err;
     //var data = shuffle(JSON.parse(data))
     var data = JSON.parse(data);
+    //console.log(data[0])
     _.forEach(data, function(val,key){
       tracks[key] = {
         id: val.id,
@@ -52,7 +53,7 @@ function getTracks(callback) {
         artwork_url: val.artwork_url || "https://i1.sndcdn.com/avatars-000003754197-qxr8rw-large.jpg",
         waveform_url: val.waveform_url,
         duration: val.duration,
-        stream_url: 'https://soundcloud.com/' + val.user.username.replace(/\s+/g, '') + '/' + val.permalink, //str = str.replace(/\s+/g, '');
+        stream_url: 'https://soundcloud.com/' + val.user.permalink + '/' + val.permalink,
         description: val.description
       };
     });
