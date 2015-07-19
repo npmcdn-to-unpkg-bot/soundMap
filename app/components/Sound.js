@@ -1,30 +1,25 @@
 var React = require('react');
 
-///////////////////////////////////////////
 var Sound = React.createClass({
-  _onPlayClick: function() {
-    this.props.onPlayClick();
-  },
   _onSelectClick: function() {
     this.props.onSelectClick();
   },
   render: function() {
     //console.log('Sound: ', this.state);
     
-    var selectedClass;
-    if (this.props.isSelected && this.props.isHoveredOver)  {
-      selectedClass = "row selected";
-    } else if (this.props.isSelected) {
-      selectedClass = "row selected";
-    } else if (this.props.isHoveredOver) {
-      selectedClass = "row hovered";
-    } else {
-      selectedClass = "row";
-    }
+    var selectedClass = function(isSelected, isHoveredOver) {
+      if ((isSelected && isHoveredOver) || isSelected) {
+        return 'row selected';
+      }
+      if ( isHoveredOver ) {
+        return 'row hovered';
+      }
+      return 'row';
+    };
     
     return (
       <div id={"Snd"+this.props.number} onClick={this._onSelectClick}>
-        <div id="Sound" className={selectedClass}
+        <div id="Sound" className={selectedClass(this.props.isSelected, this.props.isHoveredOver)}
           onMouseEnter={this.props.onMouseEnter}
           onMouseLeave={this.props.onMouseLeave}>
           <img

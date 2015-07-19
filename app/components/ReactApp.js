@@ -8,7 +8,6 @@ var Sound = require('./Sound.js');
 var MyMap = require('./MyMap.js');
 var SoundCloud = require('react-soundcloud-widget');
 
-//////////////////////////////////////////
 var ReactApp = React.createClass({
     
   getInitialState: function() {

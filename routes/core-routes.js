@@ -5,10 +5,13 @@ module.exports = function(app) {
 
 	app.get('/', function(req, res){
 		var reactHtml = React.renderToString(<ReactApp/>);
-        var output = reactHtml.trim();
-	    res.render('index.ejs', {reactOutput: output});
+	    res.render('index.ejs', {reactOutput: reactHtml});
 	});
-    app.get('/bubu', function(req,res){
-        res.send('bibibu')
+    
+    app.get('*', function(req, res) {
+        res.json({
+            "route": "Sorry this page does not exist!"
+        });
     });
+    
 };
