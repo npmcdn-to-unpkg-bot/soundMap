@@ -56,22 +56,16 @@ body {
   margin: 0 0 -5px;
   overflow:hidden;
 }
+#react-sc-widget {
 
-#Info {
-  position: absolute;
-  bottom: 0px;
-  right: 0;
-  width: 500px;
-  height: 165px;
 }
-
 #SoundList {
 
   width: 500px;
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 165px;
+  bottom: 0;
   overflow-y: scroll;
   overflow-x: hidden;
 

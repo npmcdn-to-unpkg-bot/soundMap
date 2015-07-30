@@ -20,6 +20,7 @@ var ReactApp = React.createClass({
       tracks: tracks
     };
   },
+  
   _handleHover: function(val) {
     var newState = this.state;
     newState.hoveredItem = val;
@@ -66,10 +67,8 @@ var ReactApp = React.createClass({
           onClick={this._onClick}/>
         <div id="Player">
           <SoundCloud 
+            opts={{auto_play: true,visual: false, hide_related:true}}
             url={tracks[this.state.selectedItem].stream_url}/>
-        </div>
-        <div id="Info">
-        INFOOOO
         </div>
       </div>
     );
