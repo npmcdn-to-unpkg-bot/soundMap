@@ -1,5 +1,5 @@
-var React = require('react')
-var Sound = require('./Sound.js')
+var React = require('react');
+var Sound = require('./Sound.js');
 
 var SoundList = React.createClass({
   _onItemMouseOver: function(i,event){

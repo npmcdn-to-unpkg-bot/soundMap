@@ -32,13 +32,14 @@ var ReactApp = React.createClass({
     this.replaceState(newState);
   },
   _handlePlay: function(val) {
+    var newState;
     if(!this.state.isPlaying) {
-      var newState = this.state;
+      newState = this.state;
       newState.isPlaying = true;
       newState.playingItem = val;
       this.replaceState(newState);
     } else {
-      var newState = this.state;
+      newState = this.state;
       newState.isPlaying = false;
       newState.playingItem = null;
       this.replaceState(newState);
