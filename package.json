@@ -1,6 +1,6 @@
 {
   "name": "dzwiekowamapa.pl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "soundcloud/googlemaps mashup with fieldrecordings",
   "main": "server.js",
   "author": "endziu",

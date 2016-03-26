@@ -29,7 +29,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function() {
-  server.run(['server.js'])
+  server.run(['server.js']);
   gulp.watch(['./public/**'], server.notify);
   gulp.watch('./app/**', ['scripts']);
   gulp.watch('./sass/**', ['styles']);
