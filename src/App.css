@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  float: left;
+}
+
+.App-header {
+  background: #F1F2B5; /* fallback for old browsers */
+  background: linear-gradient(to left, #F1F2B5 , #138058);
+  height: 80px;
+  padding: 10px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Lista {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  width: 500px;
+  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.listItem {
+  margin: 5px;
+  border-bottom: 1px dotted grey;
+}
+
+.listAvatar {
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.listAvatar:hover {
+  border: 2px solid #f50;
+  margin: -1px;
+}
+
+.userInfo {
+  display: inline-block;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+
+#user {
+  cursor: pointer;
+}
+
+#user:hover {
+  text-decoration: underline;
+}
+
+#title {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+#title:hover{
+  text-decoration: underline;
+}
