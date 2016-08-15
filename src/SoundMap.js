@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {Gmaps, Marker} from 'react-gmaps'
 
-const center = {
-  lat: 51.108962,
-  lng: 16.980229
+const wroclaw = {
+  lat: 51.108187,
+  lng: 16.985593
 }
 
 class SoundMap extends Component {
@@ -47,8 +47,8 @@ class SoundMap extends Component {
       <Gmaps
         width={'100%'}
         style={{position: 'absolute', top: '102px', right: '505px', bottom: 0}}
-        lat={center.lat}
-        lng={center.lng}
+        lat={wroclaw.lat}
+        lng={wroclaw.lng}
         zoom={13}
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
