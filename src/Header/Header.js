@@ -2,6 +2,9 @@ import React from 'react'
 import logo from '../assets/logo.svg'
 import './Header.css'
 
+const id='15888728'
+const soundSource = 'https://w.soundcloud.com/player/?url=api.soundcloud.com/tracks/' + id + '&amp;color=ff9900'
+
 const Header = () =>
   <div className='App-header'>
     <img src={logo} className='App-logo' alt='logo' />
@@ -10,9 +13,7 @@ const Header = () =>
       id='player'
       width='100%'
       height='20'
-      scrolling='no'
-      frameborder='no'
-      src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/271963666&amp;color=ff9900&amp;inverse=false&amp;auto_play=false&amp;show_user=true'>
+      src={soundSource}>
     </iframe>
   </div>
 
