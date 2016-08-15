@@ -1,8 +1,8 @@
 import React from 'react'
 import './SoundList.css'
+
 const ListItem = (props) =>
   <li key={props.id} className='Lista-Item'>
-    <div className='Lista-playIcon'></div>
     <img className='Lista-Item-Avatar' src={props.artwork_url} alt='artwork' />
     <div className='Lista-userInfo'>
       <div id='user'>{props.userName}</div>
