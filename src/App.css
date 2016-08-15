@@ -9,6 +9,8 @@
 }
 
 .App-header {
+  font-family: 'Amatica SC', sans-serif;
+  font-size: 16px;
   background: #F1F2B5; /* fallback for old browsers */
   background: linear-gradient(to left, #F1F2B5 , #138058);
   height: 80px;
