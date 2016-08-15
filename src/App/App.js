@@ -4,12 +4,26 @@ import SoundMap from '../SoundMap/SoundMap'
 import SoundList from '../SoundList/SoundList'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectedSound: 3
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(e) {
+    console.log(e)
+  }
+
   render() {
+    const sound = this.props.data[this.state.selectedSound]
+    const getSoundId = (snd) => snd.uri.substring(34)
     return (
       <div className="App">
-        <Header />
-        <SoundMap sounds={this.props.data}/>
-        <SoundList sounds={this.props.data} />
+        <Header soundId={getSoundId(sound)} />
+        <SoundMap sounds={this.props.data} />
+        <SoundList sounds={this.props.data} onClick={this.handleClick} />
       </div>
     )
   }

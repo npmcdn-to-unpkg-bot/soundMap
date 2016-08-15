@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './SoundList.css'
 
 const ListItem = (props) =>
@@ -10,17 +10,31 @@ const ListItem = (props) =>
     </div>
   </li>
 
-const SoundList = (props) => (
-  <ul className='Lista-main'>
-    {props.sounds.map(item =>
-      <ListItem
-        key={item.id}
-        id={item.id}
-        artwork_url={item.artwork_url}
-        userName={item.userName}
-        title={item.title}
-      />)}
-  </ul>
-)
+class SoundList extends Component {
+  constructor(props) {
+    super(props)
+    this.onClick = this.onClick.bind(this)
+  }
+
+  onClick(e) {
+    console.log('e')
+  }
+
+  render() {
+    return(
+      <ul className='Lista-main'>
+        {this.props.sounds.map(sound =>
+          <ListItem
+            onClick={this.onClick}
+            key={sound.id}
+            id={sound.id}
+            artwork_url={sound.artwork_url}
+            userName={sound.userName}
+            title={sound.title}
+          />)}
+      </ul>
+    )
+  }
+}
 
 export default SoundList
