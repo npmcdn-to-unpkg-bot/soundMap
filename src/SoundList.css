@@ -1,0 +1,72 @@
+.Lista-main {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  width: 500px;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 12px;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.Lista-Item {
+  cursor: pointer;
+  border-bottom: 1px dotted grey;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.Lista-Item-Avatar {
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.Lista-Item-Avatar:hover {
+  border: 2px solid #f90;
+  margin: -1px;
+}
+
+.Lista-userInfo {
+  display: inline-block;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+
+.Lista-playIcon {
+  position: relative;
+  top: 29px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #fff;
+}
+
+#user {
+  cursor: pointer;
+  color: #ccc;
+}
+
+#user:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+#title {
+  cursor: pointer;
+  color: #999;
+}
+
+#title:hover{
+  text-decoration: underline;
+  color: black;
+}

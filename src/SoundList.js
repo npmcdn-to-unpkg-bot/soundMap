@@ -1,17 +1,17 @@
 import React from 'react'
-
+import './SoundList.css'
 const ListItem = (props) =>
-  <li key={props.id} className='listItem'>
-    <div className='arrow-right'></div>
-    <img className='listAvatar' src={props.artwork_url} alt='artwork' />
-    <div className='userInfo'>
+  <li key={props.id} className='Lista-Item'>
+    <div className='Lista-playIcon'></div>
+    <img className='Lista-Item-Avatar' src={props.artwork_url} alt='artwork' />
+    <div className='Lista-userInfo'>
       <div id='user'>{props.userName}</div>
       <div id='title'>{props.title}</div>
     </div>
   </li>
 
 const SoundList = (props) => (
-  <ul className='Lista'>
+  <ul className='Lista-main'>
     {props.sounds.map(item =>
       <ListItem
         key={item.id}
