@@ -7,13 +7,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedSound: 3
+      selectedSound: 28
     }
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(e) {
-    console.log(e)
+    this.setState({selectedSound: 111})
   }
 
   render() {
