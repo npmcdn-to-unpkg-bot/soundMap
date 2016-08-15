@@ -5,7 +5,7 @@ import './Header.css'
 const Header = () =>
   <div className='App-header'>
     <img src={logo} className='App-logo' alt='logo' />
-    <h2 className= 'App-title'>Dźwiękowa mapa Wrocławia</h2>
+    <h2 className='App-title'>Dźwiękowa mapa Wrocławia</h2>
     <iframe
       id='player'
       width='100%'

@@ -9,9 +9,10 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  top: 100px;
+  top: 75px;
   overflow-x: hidden;
   overflow-y: scroll;
+  background: #ffffe9;
 }
 
 .Lista-Item {

@@ -1,7 +1,35 @@
+.App-title {
+  position: relative;
+  bottom: 15px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 55s linear;
+  height: 50px;
+  float: left;
+}
+
+.App-header {
+  font-family: 'Amatica SC', sans-serif;
+  font-size: 16px;
+  background: #F1F2B5; /* fallback for old browsers */
+  background: linear-gradient(to left, #F1F2B5 , #138058);
+  height: 50px;
+  padding: 10px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 #player {
   position: absolute;
-  right: 25px;
-  top: 50px;
-  width: 450px;
+  right: 8px;
+  top: 28px;
+  width: 475px;
   border: none;
 }

@@ -46,7 +46,7 @@ class SoundMap extends Component {
     return (
       <Gmaps
         width={'100%'}
-        style={{position: 'absolute', top: '102px', right: '505px', bottom: 0}}
+        style={{position: 'absolute', top: '75px', right: '505px', bottom: 0}}
         lat={wroclaw.lat}
         lng={wroclaw.lng}
         zoom={13}
