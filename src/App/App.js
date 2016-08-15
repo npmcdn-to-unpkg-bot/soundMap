@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Header from './Header'
-import SoundMap from './SoundMap'
-import SoundList from './SoundList'
+import Header from '../Header/Header'
+import SoundMap from '../SoundMap/SoundMap'
+import SoundList from '../SoundList/SoundList'
 import './App.css'
 
 class App extends Component {
