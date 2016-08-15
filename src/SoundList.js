@@ -2,6 +2,7 @@ import React from 'react'
 
 const ListItem = (props) =>
   <li key={props.id} className='listItem'>
+    <div className='arrow-right'></div>
     <img className='listAvatar' src={props.artwork_url} alt='artwork' />
     <div className='userInfo'>
       <div id='user'>{props.userName}</div>

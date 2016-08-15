@@ -30,7 +30,8 @@
   padding-left: 0;
   margin: 0;
   width: 500px;
-  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 12px;
   text-align: left;
   position: absolute;
   right: 0;
@@ -41,7 +42,7 @@
 }
 
 .listItem {
-  margin: 5px;
+  cursor: pointer;
   border-bottom: 1px dotted grey;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .listAvatar:hover {
-  border: 2px solid #f50;
+  border: 2px solid #f90;
   margin: -1px;
 }
 
@@ -66,17 +67,31 @@
 
 #user {
   cursor: pointer;
+  color: #ccc;
 }
 
 #user:hover {
   text-decoration: underline;
+  color: black;
 }
 
 #title {
   cursor: pointer;
-  font-weight: bolder;
+  color: #999;
 }
 
 #title:hover{
   text-decoration: underline;
+  color: black;
+}
+
+.arrow-right {
+  position: relative;
+  top: 29px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #fff;
 }
