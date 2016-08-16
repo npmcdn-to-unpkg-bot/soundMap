@@ -7,9 +7,13 @@ class SoundList extends Component {
     this.soundToListItem = this.soundToListItem.bind(this)
   }
 
+  handleClick(e) {
+    console.log(e.currentTarget)
+  }
+
   soundToListItem(sound, index, arr) {
     return (
-      <li key={index} className='Lista-Item' onClick={this.handleClick}>
+      <li key={index} ref={'sound' + index} className='Lista-Item' onClick={this.handleClick}>
         <img className='Lista-Item-Avatar' src={sound.artwork_url} alt='artwork' />
         <div className='Lista-userInfo'>
           <div id='user'>{sound.userName}</div>
