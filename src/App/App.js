@@ -8,7 +8,7 @@ class App extends Component {
     super()
     this.state = {
       selectedSound: 0,
-      currentZoom: 16,
+      currentZoom: 18,
       lat: 51.108187,
       lng: 16.985593
     }
@@ -16,7 +16,6 @@ class App extends Component {
   }
 
   updateSelected(val) {
-    console.log(val)
     this.setState({selectedSound: val})
   }
 
@@ -28,6 +27,7 @@ class App extends Component {
         <Header
           soundId={getSoundId(sound)} />
         <SoundMap
+          zoom={this.state.currentZoom}
           sounds={this.props.data}
           onClick={this.updateSelected}
           {...this.state} />

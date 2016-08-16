@@ -34,7 +34,7 @@ class SoundMap extends Component {
         style={{position: 'absolute', top: '75px', right: '250px', bottom: 0}}
         lat={getGps(this.props.sounds[this.props.selectedSound]).lat}
         lng={getGps(this.props.sounds[this.props.selectedSound]).lng}
-        zoom={18}
+        zoom={this.props.zoom}
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
         {this.props.sounds.map((sound, index, array) => {
