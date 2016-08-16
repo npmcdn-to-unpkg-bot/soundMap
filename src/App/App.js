@@ -8,13 +8,14 @@ class App extends Component {
     super()
     this.state = {
       selectedSound: 0,
+      currentZoom: 16,
       lat: 51.108187,
       lng: 16.985593
     }
-    this.handleClick = this.handleClick.bind(this)
+    this.updateSelected = this.updateSelected.bind(this)
   }
 
-  handleClick(val) {
+  updateSelected(val) {
     console.log(val)
     this.setState({selectedSound: val})
   }
@@ -24,9 +25,16 @@ class App extends Component {
     const getSoundId = (snd) => snd.uri.substring(34)
     return (
       <div className="App">
-        <Header soundId={getSoundId(sound)} />
-        <SoundMap sounds={this.props.data} {...this.state}/>
-        <SoundList sounds={this.props.data} onClick={this.handleClick} {...this.state}/>
+        <Header
+          soundId={getSoundId(sound)} />
+        <SoundMap
+          sounds={this.props.data}
+          onClick={this.updateSelected}
+          {...this.state} />
+        <SoundList
+          sounds={this.props.data}
+          onClick={this.updateSelected}
+          {...this.state} />
       </div>
     )
   }

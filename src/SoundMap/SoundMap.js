@@ -4,11 +4,15 @@ import {Gmaps, Marker} from 'react-gmaps'
 class SoundMap extends Component {
   onMapCreated (map) {
     map.setOptions({
-      disableDefaultUI: true,
+      disableDefaultUI: false,
       mapTypeId: 'satellite',
-      streetViewControl: false,
+      streetViewControl: true,
       tilt: 0
     })
+  }
+
+  onMarkerClick(index) {
+    this.props.onClick(index)
   }
 
   render () {
@@ -42,6 +46,7 @@ class SoundMap extends Component {
             lng={c.lng}
             name={sound.title}
             draggable={false}
+            onClick={this.onMarkerClick.bind(this, index)}
           />
         })}
       </Gmaps>
