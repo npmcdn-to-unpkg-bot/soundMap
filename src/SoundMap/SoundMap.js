@@ -4,9 +4,9 @@ import {Gmaps, Marker} from 'react-gmaps'
 class SoundMap extends Component {
   onMapCreated (map) {
     map.setOptions({
-      disableDefaultUI: false,
+      disableDefaultUI: true,
       mapTypeId: 'satellite',
-      streetViewControl: true,
+      streetViewControl: false,
       tilt: 0
     })
   }
