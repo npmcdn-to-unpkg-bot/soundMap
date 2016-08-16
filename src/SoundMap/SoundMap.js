@@ -36,10 +36,10 @@ class SoundMap extends Component {
     return (
       <Gmaps
         width={'100%'}
-        style={{position: 'absolute', top: '75px', right: '505px', bottom: 0}}
-        lat={getGps(this.props.sounds[this.props.selectedSound]).lat || this.props.lat}
-        lng={getGps(this.props.sounds[this.props.selectedSound]).lng || this.props.lng}
-        zoom={18}
+        style={{position: 'absolute', top: '75px', right: '250px', bottom: 0}}
+        lat={getGps(this.props.sounds[this.props.selectedSound]).lat}
+        lng={getGps(this.props.sounds[this.props.selectedSound]).lng}
+        zoom={20}
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
         {this.props.sounds.map(markerFromTrack)}
