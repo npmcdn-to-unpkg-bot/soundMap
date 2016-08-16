@@ -22,27 +22,27 @@ class SoundMap extends Component {
       }
     }
 
-    const markerFromTrack = (track) => {
-      const c = getGps(track)
-      return <Marker
-        key={track.id}
-        lat={c.lat}
-        lng={c.lng}
-        name={track.title}
-        draggable={false}
-      />
-    }
-
     return (
       <Gmaps
         width={'100%'}
         style={{position: 'absolute', top: '75px', right: '250px', bottom: 0}}
         lat={getGps(this.props.sounds[this.props.selectedSound]).lat}
         lng={getGps(this.props.sounds[this.props.selectedSound]).lng}
-        zoom={20}
+        zoom={18}
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
-        {this.props.sounds.map(markerFromTrack)}
+        {this.props.sounds.map((sound, index, array) => {
+          console.log()
+          const c = getGps(sound)
+          return <Marker
+            animation={(this.props.selectedSound === index) ? 1 : 0}
+            key={sound.id}
+            lat={c.lat}
+            lng={c.lng}
+            name={sound.title}
+            draggable={false}
+          />
+        })}
       </Gmaps>
     )
   }
