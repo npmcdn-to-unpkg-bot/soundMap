@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   handleClick(e) {
-    this.setState({selectedSound: 111})
+    this.setState({selectedSound: 33})
   }
 
   render() {
