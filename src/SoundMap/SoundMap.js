@@ -13,7 +13,9 @@ class SoundMap extends Component {
 
   render () {
     const getGps = (track) => {
-      const gps = track.description.split('\n')[2]
+      const desc = track.description
+      const lines = desc.split('\n')
+      const gps = lines.filter((line) => line.search('GPS') !== -1)[0]
       const lat = gps.slice(gps.search(':') + 1, gps.search(',')).trim()
       const lng = gps.slice(gps.search(',') + 1).trim()
       return {
