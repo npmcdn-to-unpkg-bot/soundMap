@@ -4,16 +4,16 @@ import SoundMap from '../SoundMap/SoundMap'
 import SoundList from '../SoundList/SoundList'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       selectedSound: 28
     }
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(e) {
-    this.setState({selectedSound: 33})
+  handleClick(val) {
+    this.setState({selectedSound: val})
   }
 
   render() {

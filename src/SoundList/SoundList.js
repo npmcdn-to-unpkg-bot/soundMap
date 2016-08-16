@@ -2,18 +2,14 @@ import React, { Component } from 'react'
 import './SoundList.css'
 
 class SoundList extends Component {
-  constructor(props) {
-    super(props)
-    this.soundToListItem = this.soundToListItem.bind(this)
-  }
 
-  handleClick(e) {
-    console.log(e.currentTarget)
+  handleClick(index, event) {
+    this.props.onClick(index)
   }
 
   soundToListItem(sound, index, arr) {
     return (
-      <li key={index} ref={'sound' + index} className='Lista-Item' onClick={this.handleClick}>
+      <li key={index} className='Lista-Item' onClick={this.handleClick.bind(this,index)}>
         <img className='Lista-Item-Avatar' src={sound.artwork_url} alt='artwork' />
         <div className='Lista-userInfo'>
           <div id='user'>{sound.userName}</div>
@@ -26,11 +22,10 @@ class SoundList extends Component {
   render() {
     return(
       <ol className='Lista-main'>
-        {this.props.sounds.map(this.soundToListItem)}
+        {this.props.sounds.map(this.soundToListItem.bind(this))}
       </ol>
     )
   }
-
 }
 
 export default SoundList
