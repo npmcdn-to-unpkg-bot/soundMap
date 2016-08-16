@@ -3,21 +3,19 @@ import Header from '../Header/Header'
 import SoundMap from '../SoundMap/SoundMap'
 import SoundList from '../SoundList/SoundList'
 
-const wroclaw = {
-  lat: 51.108187,
-  lng: 16.985593
-}
-
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      selectedSound: 28
+      selectedSound: 28,
+      lat: 51.108187,
+      lng: 16.985593
     }
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(val) {
+    console.log(val)
     this.setState({selectedSound: val})
   }
 
@@ -27,8 +25,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header soundId={getSoundId(sound)} />
-        <SoundMap sounds={this.props.data} lat={wroclaw.lat} lng={wroclaw.lng}/>
-        <SoundList sounds={this.props.data} onClick={this.handleClick} />
+        <SoundMap sounds={this.props.data} {...this.state}/>
+        <SoundList sounds={this.props.data} onClick={this.handleClick} {...this.state}/>
       </div>
     )
   }

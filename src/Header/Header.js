@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = (props) => {
   const id=props.soundId
-  const soundSource = 'https://w.soundcloud.com/player/?url=api.soundcloud.com/tracks/' + id + '&amp;color=ff9900'
+  const soundSource = 'https://w.soundcloud.com/player/?url=api.soundcloud.com/tracks/' + id + '&amp;color=ff9900&amp;auto_play=true'
 
   return (
     <div className='App-header'>

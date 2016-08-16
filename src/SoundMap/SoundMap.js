@@ -39,7 +39,7 @@ class SoundMap extends Component {
         style={{position: 'absolute', top: '75px', right: '505px', bottom: 0}}
         lat={this.props.lat}
         lng={this.props.lng}
-        zoom={13}
+        zoom={15}
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
         {this.props.sounds.map(markerFromTrack)}
