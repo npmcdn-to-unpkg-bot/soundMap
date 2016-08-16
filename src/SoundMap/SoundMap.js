@@ -32,7 +32,6 @@ class SoundMap extends Component {
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
         {this.props.sounds.map((sound, index, array) => {
-          console.log()
           const c = getGps(sound)
           return <Marker
             animation={(this.props.selectedSound === index) ? 1 : 0}

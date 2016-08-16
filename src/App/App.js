@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      selectedSound: 28,
+      selectedSound: 0,
       lat: 51.108187,
       lng: 16.985593
     }
