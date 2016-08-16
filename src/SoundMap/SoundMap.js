@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import {Gmaps, Marker} from 'react-gmaps'
 
-const wroclaw = {
-  lat: 51.108187,
-  lng: 16.985593
-}
-
 class SoundMap extends Component {
   onMapCreated (map) {
     map.setOptions({
@@ -14,10 +9,6 @@ class SoundMap extends Component {
       streetViewControl: true,
       tilt: 0
     })
-  }
-
-  onClick (e, props) {
-    console.log(e.latLng.lat(), e.latLng.lng(), props)
   }
 
   render () {
@@ -39,7 +30,6 @@ class SoundMap extends Component {
         lng={c.lng}
         name={track.title}
         draggable={false}
-        onClick={this.onClick}
       />
     }
 
@@ -47,8 +37,8 @@ class SoundMap extends Component {
       <Gmaps
         width={'100%'}
         style={{position: 'absolute', top: '75px', right: '505px', bottom: 0}}
-        lat={wroclaw.lat}
-        lng={wroclaw.lng}
+        lat={this.props.lat}
+        lng={this.props.lng}
         zoom={13}
         params={{v: '3.exp', key: 'YOUR_API_KEY'}}
         onMapCreated={this.onMapCreated}>
