@@ -8,13 +8,21 @@ class App extends Component {
     super()
     this.state = {
       selectedSound: 0,
-      currentZoom: 17
+      initialZoom: 18
     }
-    this.updateSelected = this.updateSelected.bind(this)
+    this.handleListClick = this.handleListClick.bind(this)
+    this.handleMarkerClick = this.handleMarkerClick.bind(this)
     this.updateZoom = this.updateZoom.bind(this)
   }
 
-  updateSelected(val) {
+  handleMarkerClick(val) {
+    console.log('App - selectedSound', val)
+    const currentSound = document.getElementById('snd' + val)
+    currentSound.scrollIntoView()
+    this.setState({selectedSound: val})
+  }
+
+  handleListClick(val) {
     console.log('App - selectedSound', val)
     this.setState({selectedSound: val})
   }
@@ -31,14 +39,14 @@ class App extends Component {
         <Header
           soundId={getSoundId(sound)} />
         <SoundMap
-          zoom={this.state.currentZoom}
+          zoom={this.state.initialZoom}
           sounds={this.props.data}
-          onClick={this.updateSelected}
+          onClick={this.handleMarkerClick}
           updateZoom={this.updateZoom}
           {...this.state} />
         <SoundList
           sounds={this.props.data}
-          onClick={this.updateSelected}
+          onClick={this.handleListClick}
           {...this.state} />
       </div>
     )

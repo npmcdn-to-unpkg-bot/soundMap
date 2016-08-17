@@ -22,6 +22,10 @@
   margin-left: 5px;
 }
 
+.Item-seleted {
+  background: #ffffff;
+}
+
 .Lista-Item-Avatar {
   width: 3.2em;
   height: 3.2em;

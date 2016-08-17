@@ -9,7 +9,7 @@ class SoundList extends Component {
 
   soundToListItem(sound, index, arr) {
     return (
-      <li key={index} className='Lista-Item' onClick={this.handleClick.bind(this,index)}>
+      <li key={index} id={'snd' + index} className={this.props.selectedSound === index ? 'Lista-Item Item-seleted' : 'Lista-Item'} onClick={this.handleClick.bind(this,index)}>
         <img className='Lista-Item-Avatar' src={sound.artwork_url} alt='artwork' />
         <div className='Lista-userInfo'>
           <div id='user'>{sound.userName}</div>

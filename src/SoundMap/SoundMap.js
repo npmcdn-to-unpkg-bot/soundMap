@@ -20,8 +20,8 @@ class SoundMap extends Component {
   }
 
   render () {
-    const getGps = (track) => {
-      const lines = track.description.split('\n')
+    const getGps = (sound) => {
+      const lines = sound.description.split('\n')
       const gps = lines.filter((line) => line.search('GPS') !== -1)[0]
       const lat = gps.slice(gps.search(':') + 1, gps.search(',')).trim()
       const lng = gps.slice(gps.search(',') + 1).trim()
