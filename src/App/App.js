@@ -8,15 +8,19 @@ class App extends Component {
     super()
     this.state = {
       selectedSound: 0,
-      currentZoom: 18,
-      lat: 51.108187,
-      lng: 16.985593
+      currentZoom: 17
     }
     this.updateSelected = this.updateSelected.bind(this)
+    this.updateZoom = this.updateZoom.bind(this)
   }
 
   updateSelected(val) {
+    console.log('App - selectedSound', val)
     this.setState({selectedSound: val})
+  }
+
+  updateZoom(val) {
+    console.log('App - zoom level', val)
   }
 
   render() {
@@ -30,6 +34,7 @@ class App extends Component {
           zoom={this.state.currentZoom}
           sounds={this.props.data}
           onClick={this.updateSelected}
+          updateZoom={this.updateZoom}
           {...this.state} />
         <SoundList
           sounds={this.props.data}
