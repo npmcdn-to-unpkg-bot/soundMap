@@ -8,7 +8,7 @@ class App extends Component {
     super()
     this.state = {
       selectedSound: 0,
-      zoom: 18
+      zoom: 17
     }
     this.handleListClick = this.handleListClick.bind(this)
     this.handleMarkerClick = this.handleMarkerClick.bind(this)
