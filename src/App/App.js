@@ -8,7 +8,7 @@ class App extends Component {
     super()
     this.state = {
       selectedSound: 0,
-      initialZoom: 18
+      zoom: 18
     }
     this.handleListClick = this.handleListClick.bind(this)
     this.handleMarkerClick = this.handleMarkerClick.bind(this)
@@ -39,7 +39,7 @@ class App extends Component {
         <Header
           soundId={getSoundId(sound)} />
         <SoundMap
-          zoom={this.state.initialZoom}
+          zoom={this.state.zoom}
           sounds={this.props.data}
           onClick={this.handleMarkerClick}
           updateZoom={this.updateZoom}

@@ -7,7 +7,8 @@ class SoundMap extends Component {
       disableDefaultUI: true,
       mapTypeId: 'satellite',
       streetViewControl: false,
-      tilt: 0
+      tilt: 0,
+      zoom: 15
     })
   }
 
