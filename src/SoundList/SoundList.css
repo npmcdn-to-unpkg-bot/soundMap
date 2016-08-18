@@ -23,11 +23,11 @@
 }
 
 .Lista-Item:hover {
-  background: #fefefe;
+  background: #f1f1f1;
 }
 
 .Item-seleted {
-  background: #f1f1f1;
+  background: #fefefe;
 }
 
 .Lista-Item-Avatar {
@@ -56,7 +56,7 @@
 
 #user {
   cursor: pointer;
-  color: #ccc;
+  color: #bbc;
 }
 
 #user:hover {
