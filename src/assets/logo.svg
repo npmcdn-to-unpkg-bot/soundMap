@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -19,31 +16,10 @@
    enable-background="new 0 0 465 120"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="logo.svg"><metadata
-     id="metadata76"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs74" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="2030"
-     inkscape:window-height="1172"
-     id="namedview72"
-     showgrid="false"
-     inkscape:zoom="1.4924731"
-     inkscape:cx="270.68739"
-     inkscape:cy="24.052671"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg" /><path
+   sodipodi:docname="logo.svg">
+   <path
      d="M 56.602058,7.184 C 34.997058,6.128 7.7690576,18.702 4.3170576,42.513 c -0.115,0.795 -0.193,1.585 -0.25,2.374 -0.001,0.025 -0.004,0.049 -0.006,0.074 -0.431,6.234 1.512,39.988 55.2240004,67.821 0.598,0.31 1.079,-0.196 1.27,-0.561 l 0.068,-0.146 c 0.587,-1.789 -29.796,-45.293 -20.256,-71.395 0.074,-0.201 0.15,-0.399 0.233,-0.598 2.696,-6.477 7.666,-11.292 13.972,-14.287 2.239,-1.063 4.477,-1.863 6.7,-2.419 37.825,-9.47 68.539002,45.963 35.714,75.853 -25.149,22.901 -31.404,-29.623 -3.164,-41.129 12.715002,-5.181 6.328002,28.473 -3.164,26.101 -3.956,-0.791 2.294,-12.783 -1.892,-12.783 -4.186,0 -12.345,21.483 -2.063,23.855 7.91,1.582 12.656,-7.118 15.819002,-14.237 4.746,-11.864 6.485,-33.219 -10.282002,-33.219 -16.767,0 -36.123,24.266 -26.101,56.157 4.03,12.827 22.142,10.283 32.425,0.794 C 137.01306,69.29 109.87706,9.789 56.602058,7.184 Z"
      id="path70"
      inkscape:connector-curvature="0"
-     style="fill:#000000" /></svg>
+     style="fill:#000000" />
+</svg>
