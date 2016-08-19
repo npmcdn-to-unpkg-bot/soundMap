@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Gmaps, Marker} from 'react-gmaps'
+import './SoundMap.css'
 
 class SoundMap extends Component {
   onMapCreated (map) {
@@ -33,29 +34,31 @@ class SoundMap extends Component {
     }
 
     return (
-      <Gmaps
-        ref={'mapa'}
-        width={'100%'}
-        style={{position: 'absolute', top: '75px', right: '250px', bottom: 0}}
-        lat={getGps(this.props.sounds[this.props.selectedSound]).lat}
-        lng={getGps(this.props.sounds[this.props.selectedSound]).lng}
-        zoom={this.props.zoom}
-        params={{v: '3.exp', key: 'YOUR_API_KEY'}}
-        onMapCreated={this.onMapCreated}
-        onZoomChanged={this.handleZoomChange.bind(this)}>
-        {this.props.sounds.map((sound, index, array) => {
-          const c = getGps(sound)
-          return <Marker
-            animation={(this.props.selectedSound === index) ? 1 : 0}
-            key={sound.id}
-            lat={c.lat}
-            lng={c.lng}
-            name={sound.title}
-            draggable={false}
-            onClick={this.onMarkerClick.bind(this, index)}
-          />
-        })}
-      </Gmaps>
+      <div className='mapContainer'>
+        <Gmaps
+          ref={'mapa'}
+          width={'100%'}
+          height={'100%'}
+          lat={getGps(this.props.sounds[this.props.selectedSound]).lat}
+          lng={getGps(this.props.sounds[this.props.selectedSound]).lng}
+          zoom={this.props.zoom}
+          params={{v: '3.exp', key: 'YOUR_API_KEY'}}
+          onMapCreated={this.onMapCreated}
+          onZoomChanged={this.handleZoomChange.bind(this)}>
+          {this.props.sounds.map((sound, index, array) => {
+            const c = getGps(sound)
+            return <Marker
+              animation={(this.props.selectedSound === index) ? 1 : 0}
+              key={sound.id}
+              lat={c.lat}
+              lng={c.lng}
+              name={sound.title}
+              draggable={false}
+              onClick={this.onMarkerClick.bind(this, index)}
+            />
+          })}
+        </Gmaps>
+      </div>
     )
   }
 }
