@@ -1,0 +1,27 @@
+.player {
+  position: absolute;
+  right: 329px;
+  top: 20px;
+}
+
+.player-button {
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: rgba(0, 0, 0, 0);
+  width: 35px;
+  height: 35px;
+}
+
+.player-button svg {
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.player-timer {
+  display: inline;
+  vertical-align: middle;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
