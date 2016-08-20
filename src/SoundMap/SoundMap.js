@@ -3,6 +3,7 @@ import {Gmaps, Marker} from 'react-gmaps'
 import './SoundMap.css'
 
 class SoundMap extends Component {
+  
   onMapCreated (map) {
     map.setOptions({
       disableDefaultUI: false,
