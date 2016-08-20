@@ -1,8 +1,6 @@
 .player {
-  position: absolute;
-  right: 125px;
-  top: 11px;
-  width: 365px;
+  width: 350px;
+  margin-top: 10px;
 }
 
 .player-button {

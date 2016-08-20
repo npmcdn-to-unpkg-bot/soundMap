@@ -11,9 +11,10 @@ const Header = (props) => {
     <div className='App-header clearfix'>
       <img src={logo} className='App-logo left ml2 mt1 xs-hide' alt='logo' />
       <h1 className='App-title h2 inline-block sm-hide xs-hide'>Dźwiękowa mapa Wrocławia</h1>
-      <div className='right inline-block'>
+      <div className='right inline-block m2'>
         <input className='searchBox' type="text" name="search" placeholder="Search..."></input>
       </div>
+
       <Player
         resolveUrl={urlBase + id}
         clientId={'5646c69be299b7297f6b389a5b996453'} />

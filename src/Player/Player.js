@@ -7,12 +7,12 @@ class Player extends Component {
     render() {
         let { track, currentTime, duration } = this.props;
         return (
-            <div className="player">
-                <PlayButton className="player-button" {...this.props} />
-                <Timer className="player-timer right mt2" duration={track ? track.duration / 1000 : 0} currentTime={currentTime} {...this.props} />
+            <div className='player inline-block right'>
+                <PlayButton className='player-button' {...this.props} />
+                <Timer className='player-timer right mt2' duration={track ? track.duration / 1000 : 0} currentTime={currentTime} {...this.props} />
                 <Progress
-                    className="rounded player-progress"
-                    innerClassName="rounded inner"
+                    className='rounded player-progress'
+                    innerClassName='rounded inner'
                     value={(currentTime / duration) * 100 || 0}
                     {...this.props}
                 />
