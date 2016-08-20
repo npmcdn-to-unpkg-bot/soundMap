@@ -1,25 +1,35 @@
 .App-header {
   width: 100%;
   height: 70px;
-  padding-left: 10px;
   font-family: 'Amatica SC', sans-serif;
   font-size: 16px;
-  background: #F1F2B5; /* fallback for old browsers */
-  background: linear-gradient(to left, #F1F2B5 , #138058);
-  color: black;
-  text-align: left;
+  background: #e1e2a5; /* fallback for old browsers */
+  background: linear-gradient(to left, #f1f0f1 , #c1d1c1);
   box-shadow: 0 8px 6px -6px black;
 }
 
 .App-logo {
   height: 50px;
-  display: inline-block;
-  margin: 10px 0 0 10px;
+}
+
+.App-logo:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .App-title {
   margin: 0;
   position: absolute;
   left: 90px;
-  top: 10px;
+  top: 17px;
+}
+
+.searchBox {
+  width: 100px;
+  height: 25px;
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border: 0;
+  border-bottom: 1px solid grey;
 }

@@ -5,14 +5,18 @@
   width: 500px;
   font-family: 'Yantramanav', sans-serif;
   font-size: 12px;
-  text-align: left;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 75px;
   overflow-x: hidden;
   overflow-y: scroll;
-  background: #ffffe9;
+}
+
+@media screen and (max-width: 640px) {
+    .Lista-main {
+      width: 100%
+    }
 }
 
 .Lista-Item {
@@ -27,7 +31,7 @@
 }
 
 .Item-seleted {
-  background: #fefefe;
+  background: #f1f1f1;
 }
 
 .Lista-Item-Avatar {

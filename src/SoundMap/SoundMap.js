@@ -5,9 +5,9 @@ import './SoundMap.css'
 class SoundMap extends Component {
   onMapCreated (map) {
     map.setOptions({
-      disableDefaultUI: true,
+      disableDefaultUI: false,
       mapTypeId: 'satellite',
-      streetViewControl: false,
+      streetViewControl: true,
       tilt: 0,
       zoom: 15
     })
@@ -34,7 +34,7 @@ class SoundMap extends Component {
     }
 
     return (
-      <div className='mapContainer'>
+      <div className='mapContainer xs-hide'>
         <Gmaps
           ref={'mapa'}
           width={'100%'}

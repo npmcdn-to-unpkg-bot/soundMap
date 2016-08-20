@@ -1,8 +1,8 @@
 .player {
   position: absolute;
-  right: 5px;
-  top: 15px;
-  width: 490px;
+  right: 125px;
+  top: 11px;
+  width: 365px;
 }
 
 .player-button {
@@ -16,21 +16,20 @@
 
 .player-timer {
   display: inline;
+  vertical-align: middle;
   font-family: 'Yantramanav', sans-serif;
   font-size: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .player-progress {
   border: 0;
-  margin-top: 5px;
+  margin-top: 0px;
   background: #666;
-  height: 7px;
+  height: 5px;
 }
 
 .inner {
   border: 0;
-  background: #FFEE00;
-  height: 7px;
+  background: orange;
+  height: 5px;
 }

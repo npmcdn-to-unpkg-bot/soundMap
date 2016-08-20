@@ -9,7 +9,7 @@ class Player extends Component {
         return (
             <div className="player">
                 <PlayButton className="player-button" {...this.props} />
-                <Timer className="player-timer" duration={track ? track.duration / 1000 : 0} currentTime={currentTime} {...this.props} />
+                <Timer className="player-timer right mt2" duration={track ? track.duration / 1000 : 0} currentTime={currentTime} {...this.props} />
                 <Progress
                     className="rounded player-progress"
                     innerClassName="rounded inner"
