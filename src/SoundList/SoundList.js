@@ -16,20 +16,22 @@ class SoundList extends Component {
 
     return (
       containsFilteredText
-      ? <li key={index}
-          id={'snd' + index}
+      ? <li
           className={this.props.selectedSound === index
                       ? 'Lista-Item Item-seleted'
                       : 'Lista-Item'}
+          key={index}
+          id={'snd' + index}
           onClick={this.handleClick.bind(this,index)}>
           <img
             className='Lista-Item-Avatar'
             src={sound.artwork_url}
-            alt='artwork' />
-            <div className='Lista-userInfo'>
+            alt='artwork'>
+          </img>
+          <div className='Lista-userInfo'>
             <div id='user'>{sound.userName}</div>
             <div id='title'>{sound.title}</div>
-            </div>
+          </div>
         </li>
       : null
     )
