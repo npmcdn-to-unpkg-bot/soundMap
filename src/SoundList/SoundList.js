@@ -14,10 +14,10 @@ class SoundList extends Component {
       ' ' +
       sound.userName +
       ' ' +
-      sound.description
+      sound.description.trim()
 
-    const containsFilteredText = soundString.search(this.props.filter) !== -1
-    //console.log(containsFilteredText)
+    const containsFilteredText = soundString.toLowerCase().search(this.props.filter) !== -1
+    //console.log(soundString)
 
     return (
       containsFilteredText ? <li key={index}

@@ -6,7 +6,7 @@ import './Header.css'
 class Header extends Component {
   setFilter(e) {
     e.preventDefault()
-    this.props.onFilter(e.target.value)
+    this.props.onFilter(e.target.value.toLowerCase())
   }
 
   render() {
