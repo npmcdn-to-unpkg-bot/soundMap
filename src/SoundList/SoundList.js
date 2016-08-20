@@ -8,8 +8,19 @@ class SoundList extends Component {
   }
 
   soundToListItem(sound, index, arr) {
+
+    const soundString =
+      sound.title +
+      ' ' +
+      sound.userName +
+      ' ' +
+      sound.description
+
+    const containsFilteredText = soundString.search(this.props.filter) !== -1
+    //console.log(containsFilteredText)
+
     return (
-      <li key={index}
+      containsFilteredText ? <li key={index}
           id={'snd' + index}
           className={this.props.selectedSound === index ? 'Lista-Item Item-seleted' : 'Lista-Item'}
           onClick={this.handleClick.bind(this,index)}>
@@ -18,7 +29,7 @@ class SoundList extends Component {
           <div id='user'>{sound.userName}</div>
           <div id='title'>{sound.title}</div>
         </div>
-      </li>
+      </li> : null
     )
   }
 

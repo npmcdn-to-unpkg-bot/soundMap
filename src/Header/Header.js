@@ -4,9 +4,9 @@ import logo from '../assets/logo.svg'
 import './Header.css'
 
 class Header extends Component {
-  filterData(e) {
+  setFilter(e) {
     e.preventDefault()
-    console.log(e.target.value)
+    this.props.onFilter(e.target.value)
   }
 
   render() {
@@ -23,7 +23,7 @@ class Header extends Component {
             type='text'
             name='search'
             placeholder='Search...'
-            onChange={this.filterData.bind(this)}>
+            onChange={this.setFilter.bind(this)}>
           </input>
         </div>
 
