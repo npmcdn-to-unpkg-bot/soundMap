@@ -9,7 +9,7 @@ class SoundList extends Component {
 
   soundToListItem(sound, index, arr) {
     const soundString = sound.title + ' ' + sound.userName + ' ' +
-      sound.description.trim()
+      sound.description
 
     const containsFilteredText =
       soundString.toLowerCase().search(this.props.filter) !== -1

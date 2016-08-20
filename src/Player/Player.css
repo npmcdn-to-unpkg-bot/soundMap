@@ -3,6 +3,14 @@
   margin-top: 10px;
 }
 
+@media screen and (max-width: 640px) {
+    .player {
+      float:left;
+      margin-left: 10px;
+      width: calc(100% - 210px);
+    }
+}
+
 .player-button {
   margin-left: 2px;
   border: 0;
