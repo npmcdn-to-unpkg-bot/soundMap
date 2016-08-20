@@ -8,28 +8,30 @@ class SoundList extends Component {
   }
 
   soundToListItem(sound, index, arr) {
-
-    const soundString =
-      sound.title +
-      ' ' +
-      sound.userName +
-      ' ' +
+    const soundString = sound.title + ' ' + sound.userName + ' ' +
       sound.description.trim()
 
-    const containsFilteredText = soundString.toLowerCase().search(this.props.filter) !== -1
-    //console.log(soundString)
+    const containsFilteredText =
+      soundString.toLowerCase().search(this.props.filter) !== -1
 
     return (
-      containsFilteredText ? <li key={index}
+      containsFilteredText
+      ? <li key={index}
           id={'snd' + index}
-          className={this.props.selectedSound === index ? 'Lista-Item Item-seleted' : 'Lista-Item'}
+          className={this.props.selectedSound === index
+                      ? 'Lista-Item Item-seleted'
+                      : 'Lista-Item'}
           onClick={this.handleClick.bind(this,index)}>
-        <img className='Lista-Item-Avatar' src={sound.artwork_url} alt='artwork' />
-        <div className='Lista-userInfo'>
-          <div id='user'>{sound.userName}</div>
-          <div id='title'>{sound.title}</div>
-        </div>
-      </li> : null
+          <img
+            className='Lista-Item-Avatar'
+            src={sound.artwork_url}
+            alt='artwork' />
+            <div className='Lista-userInfo'>
+            <div id='user'>{sound.userName}</div>
+            <div id='title'>{sound.title}</div>
+            </div>
+        </li>
+      : null
     )
   }
 
