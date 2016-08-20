@@ -7,13 +7,13 @@ class Player extends Component {
   render() {
     let { track, currentTime, duration } = this.props;
     return (
-      <div className='player inline-block right'>
+      <div className='player'>
         <PlayButton
           className='player-button'
           {...this.props}
         />
         <Timer
-          className='player-timer right mt2'
+          className='player-timer right mr1'
           duration={track ? track.duration / 1000 : 0}
           currentTime={currentTime}
           {...this.props}
