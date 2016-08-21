@@ -3,3 +3,8 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+a:link    { color: #000 }  /* unvisited links */
+a:visited { color: #000 }  /* visited links   */
+a:hover   { color: #000 }  /* user hovers     */
+a:active  { color: #000 }  /* active links    */

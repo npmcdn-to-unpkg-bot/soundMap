@@ -15,14 +15,17 @@ class Header extends Component {
 
     return (
       <div className='App-header clearfix'>
-        <img
-          src={logo}
-          className='App-logo left'
-          alt='logo'
-        />
-        <h1 className='App-title h2 inline-block sm-hide xs-hide'>
-          Dźwiękowa mapa Wrocławia
-        </h1>
+        <a href='/'>
+          <img
+            src={logo}
+            className='App-logo left'
+            alt='logo'
+          />
+
+          <h1 className='App-title h2 inline-block sm-hide xs-hide'>
+            Dźwiękowa mapa Wrocławia
+          </h1>
+        </a>
         <div className='right inline-block m2 xs-hide'>
           <input
             className='searchBox'
