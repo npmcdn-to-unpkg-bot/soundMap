@@ -2,8 +2,8 @@
   width: 100%;
   font-family: 'Amatica SC', sans-serif;
   font-size: 16px;
-  background: #e1e2a5; /* fallback for old browsers */
-  background: linear-gradient(to left, #ffffff, #abccab);
+  background: #bfb; /* fallback for old browsers */
+  background: linear-gradient(to left, #fff, #bfb);
   box-shadow: 0 8px 6px -6px black;
 }
 

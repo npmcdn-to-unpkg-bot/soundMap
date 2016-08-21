@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserInfo from '../UserInfo/UserInfo'
 import './SoundList.css'
 
 class SoundList extends Component {
@@ -28,10 +29,7 @@ class SoundList extends Component {
             src={sound.artwork_url}
             alt='artwork'>
           </img>
-          <div className='Lista-userInfo'>
-            <div id='user'>{sound.userName}</div>
-            <div id='title' className='truncate'>{sound.title}</div>
-          </div>
+          <UserInfo userName={sound.userName} title={sound.title} />
         </li>
       : null
     )
