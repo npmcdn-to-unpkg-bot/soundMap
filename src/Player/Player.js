@@ -20,7 +20,7 @@ class Player extends Component {
           {...this.props}
         />
         <Timer
-          className='player-timer right mt2'
+          className='player-timer right mt2 xs-hide'
           duration={track ? track.duration / 1000 : 0}
           currentTime={currentTime}
           {...this.props}
