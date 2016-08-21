@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Player from '../Player/Player'
 import './SoundList.css'
 
 class SoundList extends Component {
@@ -9,17 +8,11 @@ class SoundList extends Component {
   }
 
   soundToListItem(sound, index, arr) {
-    const id = this.props.sounds[this.props.selectedSound].id
-    const urlBase = 'https://api.soundcloud.com/tracks/'
-
-    const soundString =
-      [ sound.title
-      , sound.userName
-      ,sound.description
-      ].join('\n').toLowerCase()
+    const soundString = sound.title + ' ' + sound.userName + ' ' +
+      sound.description
 
     const containsFilteredText =
-      soundString.search(this.props.filter) !== -1
+      soundString.toLowerCase().search(this.props.filter) !== -1
 
     return (
       containsFilteredText
@@ -39,12 +32,6 @@ class SoundList extends Component {
             <div id='user'>{sound.userName}</div>
             <div id='title'>{sound.title}</div>
           </div>
-          {this.props.selectedSound === index
-            ? <Player
-                resolveUrl={urlBase + id}
-                clientId={'5646c69be299b7297f6b389a5b996453'}
-              />
-            : null}
         </li>
       : null
     )

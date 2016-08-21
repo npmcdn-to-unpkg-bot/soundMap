@@ -1,36 +1,37 @@
 .player {
-  width: 100%;
-  position: relative;
-  top: -38px;
+  width: 350px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .player {
+      float:left;
+      margin-left: 10px;
+      width: calc(100% - 210px);
+    }
 }
 
 .player-button {
-  margin: 0;
-  padding: 0;
+  margin-left: 2px;
   border: 0;
   background: rgba(0, 0, 0, 0);
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   outline-width: 0;
-  margin-left: 15px;
-}
-
-.player-button svg {
-  color: white;
-  transform: scale(0.8);
 }
 
 .player-timer {
   display: inline;
+  vertical-align: middle;
   font-family: 'Yantramanav', sans-serif;
   font-size: 15px;
 }
 
 .player-progress {
   border: 0;
+  margin-top: 0px;
   background: #666;
   height: 5px;
-  margin-top: 10px;
 }
 
 .inner {
