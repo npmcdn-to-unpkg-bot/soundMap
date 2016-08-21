@@ -30,7 +30,7 @@ class SoundList extends Component {
           </img>
           <div className='Lista-userInfo'>
             <div id='user'>{sound.userName}</div>
-            <div id='title'>{sound.title}</div>
+            <div id='title' className='truncate'>{sound.title}</div>
           </div>
         </li>
       : null

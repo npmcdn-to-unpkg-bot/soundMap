@@ -2,7 +2,7 @@
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  width: 500px;
+  width: 350px;
   font-family: 'Yantramanav', sans-serif;
   font-size: 12px;
   position: absolute;
@@ -53,9 +53,10 @@
 
 .Lista-userInfo {
   display: inline-block;
-  padding-left: 10px;
   position: relative;
-  bottom: 8px;
+  bottom: 5px;
+  padding-left: 10px;
+  width: 250px;
 }
 
 #user {

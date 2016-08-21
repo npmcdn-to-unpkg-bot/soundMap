@@ -17,7 +17,7 @@ class Header extends Component {
       <div className='App-header clearfix'>
         <img
           src={logo}
-          className='App-logo left ml2 mt1'
+          className='App-logo left'
           alt='logo'
         />
         <h1 className='App-title h2 inline-block sm-hide xs-hide'>
