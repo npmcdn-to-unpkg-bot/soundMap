@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import { SoundPlayerContainer } from 'react-soundplayer/addons'
 import { PlayButton, Timer, Progress } from 'react-soundplayer/components'
+import UserInfo from '../UserInfo/UserInfo'
 import './Player.css'
 
 class Player extends Component {
@@ -10,6 +11,12 @@ class Player extends Component {
       <div className='player inline-block right'>
         <PlayButton
           className='player-button'
+          {...this.props}
+        />
+        <UserInfo
+          style={'player-userInfo'}
+          title={track ? track.title : 'loading title...'}
+          userName={track ? track.user.username : 'loading user name...'}
           {...this.props}
         />
         <Timer

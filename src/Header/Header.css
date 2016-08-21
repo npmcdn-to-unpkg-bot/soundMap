@@ -1,7 +1,5 @@
 .App-header {
   width: 100%;
-  font-family: 'Amatica SC', sans-serif;
-  font-size: 16px;
   background: #bfb; /* fallback for old browsers */
   background: linear-gradient(to left, #fff, #bfb);
   box-shadow: 0 8px 6px -6px black;
@@ -19,6 +17,8 @@
 }
 
 .App-title {
+  font-family: 'Amatica SC', sans-serif;
+  font-size: 25px;
   margin: 0;
   position: absolute;
   left: 90px;

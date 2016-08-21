@@ -29,7 +29,7 @@ class SoundList extends Component {
             src={sound.artwork_url}
             alt='artwork'>
           </img>
-          <UserInfo userName={sound.userName} title={sound.title} />
+          <UserInfo style={'Lista-userInfo'} userName={sound.userName} title={sound.title} />
         </li>
       : null
     )
