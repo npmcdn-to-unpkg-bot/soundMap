@@ -21,7 +21,6 @@ class Header extends Component {
             className='App-logo left'
             alt='logo'
           />
-
           <h1 className='App-title h2 inline-block sm-hide xs-hide'>
             Dźwiękowa mapa Wrocławia
           </h1>
@@ -35,7 +34,6 @@ class Header extends Component {
             onChange={this.setFilter.bind(this)}>
           </input>
         </div>
-
         <Player
           userName={this.props.userName}
           title={this.props.title}

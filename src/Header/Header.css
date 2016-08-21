@@ -1,7 +1,7 @@
 .App-header {
   width: 100%;
-  background: #bfb; /* fallback for old browsers */
-  background: linear-gradient(to left, #fff, #bfb);
+  background: #70cc70; /* fallback for old browsers */
+  background: linear-gradient(to left, #fff, #70cc70);
   box-shadow: 0 8px 6px -6px black;
 }
 
