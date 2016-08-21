@@ -3,7 +3,7 @@ import {Gmaps, Marker} from 'react-gmaps'
 import './SoundMap.css'
 
 class SoundMap extends Component {
-  
+
   onMapCreated (map) {
     map.setOptions({
       disableDefaultUI: false,
@@ -15,10 +15,6 @@ class SoundMap extends Component {
 
   onMarkerClick(index) {
     this.props.onClick(index)
-  }
-
-  handleZoomChange() {
-    this.props.updateZoom(this.refs.mapa.getMap().zoom)
   }
 
   render () {
@@ -41,10 +37,9 @@ class SoundMap extends Component {
           height={'100%'}
           lat={getGps(this.props.sounds[this.props.selectedSound]).lat}
           lng={getGps(this.props.sounds[this.props.selectedSound]).lng}
-          zoom={this.props.zoom || 17}
+          zoom={this.props.zoom}
           params={{v: '3.exp', key: 'YOUR_API_KEY'}}
-          onMapCreated={this.onMapCreated}
-          onZoomChanged={this.handleZoomChange.bind(this)}>
+          onMapCreated={this.onMapCreated}>
           {this.props.sounds.map((sound, index, array) => {
             const c = getGps(sound)
             return <Marker

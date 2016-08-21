@@ -13,28 +13,20 @@ class App extends Component {
     }
     this.handleListClick = this.handleListClick.bind(this)
     this.handleMarkerClick = this.handleMarkerClick.bind(this)
-    this.updateZoom = this.updateZoom.bind(this)
     this.onFilter = this.onFilter.bind(this)
   }
 
   handleMarkerClick(val) {
-    console.log('App - selectedSound', val)
     const currentSound = document.getElementById('snd' + val)
     currentSound.scrollIntoView()
     this.setState({selectedSound: val})
   }
 
   handleListClick(val) {
-    console.log('App - selectedSound', val)
     this.setState({selectedSound: val})
   }
 
-  updateZoom(val) {
-    console.log('App - zoom level', val)
-  }
-
   onFilter(val) {
-    console.log(val)
     this.setState({filter: val})
   }
 
@@ -52,7 +44,6 @@ class App extends Component {
           zoom={this.state.zoom}
           sounds={this.props.data}
           onClick={this.handleMarkerClick}
-          updateZoom={this.updateZoom}
           {...this.state} />
         <SoundList
           filter={this.state.filter}
