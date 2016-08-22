@@ -1,6 +1,6 @@
 .player {
-  width: 400px;
-  margin-top: 7px;
+  width: 350px;
+  margin-top: 5px;
   font-family: 'Yantramanav', sans-serif;
 }
 
@@ -39,15 +39,21 @@
   font-size: 15px;
 }
 
+@media screen and (max-width: 640px) {
+    .player-timer {
+      display: none;
+    }
+}
+
 .player-progress {
   margin-top: 40px;
   border: 0;
   background: #666;
-  height: 4px;
+  height: 8px;
 }
 
 .inner {
   border: 0;
   background: orange;
-  height: 4px;
+  height: 8px;
 }

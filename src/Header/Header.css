@@ -19,10 +19,6 @@
 .App-title {
   font-family: 'Amatica SC', sans-serif;
   font-size: 25px;
-  margin: 0;
-  position: absolute;
-  left: 90px;
-  top: 10px;
 }
 
 .searchBox {
@@ -30,6 +26,12 @@
   height: 25px;
   border: 0;
   border-bottom: 1px solid grey;
+}
+
+@media screen and (max-width: 400px) {
+  .searchBox {
+    width: 100%;
+  }
 }
 
 .searchBox:focus {

@@ -3,6 +3,20 @@ import Player from '../Player/Player'
 import logo from '../assets/logo.svg'
 import './Header.css'
 
+const AppTitle =
+  (props) =>
+    <h1 className={props.styles}>
+      {props.title}
+    </h1>
+
+const AppLogo =
+  (props) =>
+    <img
+      src={props.imgSrc}
+      className={props.styles}
+      alt='logo'
+    />
+
 class Header extends Component {
   setFilter(e) {
     e.preventDefault()
@@ -15,16 +29,14 @@ class Header extends Component {
 
     return (
       <div className='App-header clearfix'>
-        <a href='/'>
-          <img
-            src={logo}
-            className='App-logo left'
-            alt='logo'
-          />
-          <h1 className='App-title h2 inline-block sm-hide'>
-            Dźwiękowa mapa Wrocławia
-          </h1>
-        </a>
+        <AppLogo
+          styles={'App-logo left'}
+          imgSrc={logo}
+        />
+        <AppTitle
+          title='Dźwiękowa Mapa Wrocławia'
+          styles='App-title inline-block mb0 sm-hide'
+        />
         <div className='right inline-block m2'>
           <input
             className='searchBox'

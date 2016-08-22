@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App/App';
-import tracks from './data/tracks.json'
+import tracks from './assets/data/tracks.json'
 import './index.css'
 
 ReactDOM.render(
