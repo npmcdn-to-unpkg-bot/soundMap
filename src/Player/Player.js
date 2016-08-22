@@ -10,19 +10,19 @@ class Player extends Component {
     return (
       <div className='player inline-block right'>
         <PlayButton
-          className='player-button'
-          {...this.props}
-        />
-        <UserInfo
-          style={'player-userInfo'}
-          title={track ? track.title : 'loading title...'}
-          userName={track ? track.user.username : 'loading user name...'}
+          className='player-button left'
           {...this.props}
         />
         <Timer
-          className='player-timer right mt2 xs-hide'
+          className='player-timer right'
           duration={track ? track.duration / 1000 : 0}
           currentTime={currentTime}
+          {...this.props}
+        />
+        <UserInfo
+          style={'player-userInfo left ml2'}
+          title={track ? track.title : 'loading title...'}
+          userName={track ? track.user.username : 'loading user name...'}
           {...this.props}
         />
         <Progress

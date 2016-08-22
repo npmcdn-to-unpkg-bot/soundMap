@@ -21,11 +21,11 @@ class Header extends Component {
             className='App-logo left'
             alt='logo'
           />
-          <h1 className='App-title h2 inline-block sm-hide xs-hide'>
+          <h1 className='App-title h2 inline-block sm-hide'>
             Dźwiękowa mapa Wrocławia
           </h1>
         </a>
-        <div className='right inline-block m2 xs-hide'>
+        <div className='right inline-block m2'>
           <input
             className='searchBox'
             type='text'

@@ -19,17 +19,17 @@ class SoundList extends Component {
       containsFilteredText
       ? <li
           className={this.props.selectedSound === index
-            ? 'Lista-Item Item-seleted'
-            : 'Lista-Item'}
+            ? 'Lista-Item Item-seleted clearfix'
+            : 'Lista-Item clearfix'}
           key={index}
           id={'snd' + index}
           onClick={this.handleClick.bind(this,index)}>
           <img
-            className='Lista-Item-Avatar'
+            className='Lista-Item-Avatar left m1'
             src={sound.artwork_url}
             alt='artwork'>
           </img>
-          <UserInfo style={'Lista-userInfo'} userName={sound.userName} title={sound.title} />
+          <UserInfo style={'Lista-userInfo mt1'} userName={sound.userName} title={sound.title} />
         </li>
       : null
     )
