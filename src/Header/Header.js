@@ -6,16 +6,18 @@ import './Header.css'
 const AppTitle =
   (props) =>
     <h1 className={props.styles}>
-      {props.title}
+      <a href='/'>{props.title}</a>
     </h1>
 
 const AppLogo =
   (props) =>
-    <img
-      src={props.imgSrc}
-      className={props.styles}
-      alt='logo'
-    />
+    <a href='/'>
+      <img
+        src={props.imgSrc}
+        className={props.styles}
+        alt='logo'
+      />
+    </a>
 
 class Header extends Component {
   setFilter(e) {
@@ -46,7 +48,7 @@ class Header extends Component {
         />
 
         <input
-          className='searchBox m1'
+          className='searchBox m2'
           type='text'
           name='search'
           placeholder={'Search...'}
