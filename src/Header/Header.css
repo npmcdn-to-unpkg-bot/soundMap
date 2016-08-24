@@ -2,11 +2,13 @@
   background: #70cc70; /* fallback for old browsers */
   background: linear-gradient(to left, #ffeecc, #f4ffd0);
   box-shadow: 0 8px 6px -6px black;
+  max-height: 70px;
   min-height: 70px;
 }
 
 .App-logo {
   height: 50px;
+  min-width: 50px;
   margin-left: 10px;
 }
 
@@ -19,6 +21,7 @@
   font-family: 'Amatica SC', sans-serif;
   font-size: 25px;
   margin-left: 10px;
+  width: 240px;
   min-width: 240px;
 }
 

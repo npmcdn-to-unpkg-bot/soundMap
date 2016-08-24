@@ -11,13 +11,11 @@ const AppTitle =
 
 const AppLogo =
   (props) =>
-    <a href='/'>
-      <img
-        src={props.imgSrc}
-        className={props.styles}
-        alt='logo'
-      />
-    </a>
+    <img
+      src={props.imgSrc}
+      className={props.styles}
+      alt='logo'
+    />
 
 class Header extends Component {
   setFilter(e) {
