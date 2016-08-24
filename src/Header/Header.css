@@ -1,14 +1,13 @@
 .App-header {
-  width: 100%;
   background: #70cc70; /* fallback for old browsers */
   background: linear-gradient(to left, #ffeecc, #f4ffd0);
   box-shadow: 0 8px 6px -6px black;
+  min-height: 70px;
 }
 
 .App-logo {
   height: 50px;
-  margin-left: 0.8rem;
-  margin-top: 0.3rem;
+  margin-left: 10px;
 }
 
 .App-logo:hover {
@@ -19,21 +18,39 @@
 .App-title {
   font-family: 'Amatica SC', sans-serif;
   font-size: 25px;
+  margin-left: 10px;
+  min-width: 240px;
 }
 
 .searchBox {
-  width: 100px;
+  max-width: 100px;
   height: 25px;
   border: 0;
   border-bottom: 1px solid grey;
 }
 
-@media screen and (max-width: 400px) {
-  .searchBox {
-    width: 100%;
+.searchBox:focus {
+  outline: 1px dotted red;
+}
+
+@media screen and (max-width: 745px) {
+  .App-title: {
+    display: none;
   }
 }
 
-.searchBox:focus {
-  outline: none;
+@media screen and (max-width: 640px) {
+    .App-title {
+      display: none;
+    }
+
+    .searchBox {
+      width: 50px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+  .App-logo {
+    display: none;
+  }
 }

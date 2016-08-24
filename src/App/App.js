@@ -40,16 +40,16 @@ class App extends Component {
           title={sound.title}
           onFilter={this.onFilter}
           soundId={getSoundId(sound)} />
-        <SoundMap
-          zoom={this.state.zoom}
-          sounds={this.props.data}
-          onClick={this.handleMarkerClick}
-          {...this.state} />
-        <SoundList
-          filter={this.state.filter}
-          sounds={this.props.data}
-          onClick={this.handleListClick}
-          {...this.state} />
+          <SoundMap
+            zoom={this.state.zoom}
+            sounds={this.props.data}
+            onClick={this.handleMarkerClick}
+            {...this.state} />
+          <SoundList
+            filter={this.state.filter}
+            sounds={this.props.data}
+            onClick={this.handleListClick}
+            {...this.state} />
       </div>
     )
   }

@@ -8,7 +8,7 @@ class Player extends Component {
   render() {
     let { track, currentTime, duration } = this.props;
     return (
-      <div className='player inline-block right'>
+      <div className='player'>
         <PlayButton
           className='player-button left'
           {...this.props}
@@ -20,7 +20,7 @@ class Player extends Component {
           {...this.props}
         />
         <UserInfo
-          style={'player-userInfo left ml2'}
+          style={'player-userInfo left ml1'}
           title={track ? track.title : 'loading title...'}
           userName={track ? track.user.username : 'loading user name...'}
           {...this.props}

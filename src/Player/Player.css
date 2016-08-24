@@ -1,15 +1,8 @@
 .player {
-  width: 350px;
-  margin-top: 5px;
+  min-width: 305px;
+  width: 100%;
+  margin-left: 10px;
   font-family: 'Yantramanav', sans-serif;
-}
-
-@media screen and (max-width: 640px) {
-    .player {
-      float:left;
-      margin-left: 10px;
-      width: calc(100% - 20px);
-    }
 }
 
 .player-button {
@@ -29,20 +22,12 @@
 }
 
 .player-userInfo {
-  width: 180px;
+  width: 175px;
   font-size: 12px;
 }
 
 .player-timer {
-  display: inline;
-  vertical-align: middle;
-  font-size: 15px;
-}
-
-@media screen and (max-width: 640px) {
-    .player-timer {
-      display: none;
-    }
+  font-size: 13px;
 }
 
 .player-progress {
@@ -56,4 +41,10 @@
   border: 0;
   background: orange;
   height: 8px;
+}
+
+@media screen and (max-width: 640px) {
+  .player {
+    max-width: calc(100% - 66px;)
+  }
 }

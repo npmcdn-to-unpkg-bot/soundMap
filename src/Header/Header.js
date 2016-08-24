@@ -28,30 +28,33 @@ class Header extends Component {
     const urlBase = 'https://api.soundcloud.com/tracks/'
 
     return (
-      <div className='App-header clearfix'>
+      <div className='App-header flex items-center justify-between'>
+
         <AppLogo
-          styles={'App-logo left'}
+          styles={'App-logo '}
           imgSrc={logo}
         />
+
         <AppTitle
           title='Dźwiękowa Mapa Wrocławia'
-          styles='App-title inline-block mb0 sm-hide'
+          styles='App-title'
         />
-        <div className='right inline-block m2'>
-          <input
-            className='searchBox'
-            type='text'
-            name='search'
-            placeholder='Search...'
-            onChange={this.setFilter.bind(this)}>
-          </input>
-        </div>
+
         <Player
           userName={this.props.userName}
           title={this.props.title}
           resolveUrl={urlBase + id}
           clientId={'5646c69be299b7297f6b389a5b996453'}
         />
+
+        <input
+          className='searchBox m1'
+          type='text'
+          name='search'
+          placeholder={'Search...'}
+          onChange={this.setFilter.bind(this)}>
+        </input>
+
       </div>
     )
   }
