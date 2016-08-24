@@ -22,31 +22,32 @@
   min-width: 240px;
 }
 
+.App-title:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .searchBox {
-  max-width: 100px;
+  max-width: 75px;
   height: 25px;
   border: 0;
   border-bottom: 1px solid grey;
 }
 
 .searchBox:focus {
-  outline: 1px dotted red;
+  outline: 1px dotted orange;
 }
 
 @media screen and (max-width: 745px) {
-  .App-title: {
+  .App-title {
     display: none;
   }
 }
 
 @media screen and (max-width: 640px) {
-    .App-title {
-      display: none;
-    }
-
-    .searchBox {
-      width: 50px;
-    }
+  .searchBox {
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 445px) {

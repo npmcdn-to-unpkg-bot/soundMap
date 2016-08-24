@@ -36,8 +36,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header
-          userName={sound.userName}
-          title={sound.title}
           onFilter={this.onFilter}
           soundId={getSoundId(sound)} />
           <SoundMap

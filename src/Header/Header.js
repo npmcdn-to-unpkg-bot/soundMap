@@ -41,8 +41,6 @@ class Header extends Component {
         />
 
         <Player
-          userName={this.props.userName}
-          title={this.props.title}
           resolveUrl={urlBase + id}
           clientId={'5646c69be299b7297f6b389a5b996453'}
         />
