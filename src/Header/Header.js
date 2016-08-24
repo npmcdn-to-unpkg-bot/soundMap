@@ -31,7 +31,6 @@ class Header extends Component {
 
     return (
       <div className='App-header flex items-center justify-between'>
-
         <AppLogo
           styles={'App-logo '}
           imgSrc={logo}
@@ -51,10 +50,9 @@ class Header extends Component {
           className='searchBox m2'
           type='text'
           name='search'
-          placeholder={'Search...'}
+          placeholder={'Szukaj...'}
           onChange={this.setFilter.bind(this)}>
         </input>
-
       </div>
     )
   }

@@ -35,7 +35,7 @@
 }
 
 .searchBox:focus {
-  outline: 1px dotted orange;
+  outline: 1px dotted #ccc;
 }
 
 @media screen and (max-width: 745px) {
