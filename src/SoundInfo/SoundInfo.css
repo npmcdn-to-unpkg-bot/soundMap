@@ -3,7 +3,7 @@
   top: 75px;
   right: 0;
   z-index: 1;
-  width: 355px;
+  width: 350px;
   height: 75px;
   overflow: auto;
   background-color: white;
@@ -18,6 +18,14 @@
 .SoundInfo p {
   margin: 2px;
   border-bottom: 1px dotted lightGrey;
+}
+
+.long {
+  width: calc(100% - 20px)
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (max-width: 640px) {

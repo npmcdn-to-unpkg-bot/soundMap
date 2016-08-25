@@ -10,9 +10,11 @@ class App extends Component {
     this.state = {
       selectedSound: 0,
       zoom: 17,
-      filter: ''
+      filter: '',
+      longDescription: false
     }
     this.handleListClick = this.handleListClick.bind(this)
+    this.handleInfoClick = this.handleInfoClick.bind(this)
     this.handleMarkerClick = this.handleMarkerClick.bind(this)
     this.onFilter = this.onFilter.bind(this)
   }
@@ -27,6 +29,10 @@ class App extends Component {
     this.setState({selectedSound: val})
   }
 
+  handleInfoClick(val) {
+    this.setState({longDescription: !this.state.longDescription})
+  }
+
   onFilter(val) {
     this.setState({filter: val})
   }
@@ -39,7 +45,7 @@ class App extends Component {
         <Header
           onFilter={this.onFilter}
           soundId={getSoundId(sound)} />
-        <SoundInfo description={sound.description} />
+        <SoundInfo description={sound.description} long={this.state.longDescription} handleInfoClick={this.handleInfoClick}/>
         <SoundMap
           zoom={this.state.zoom}
           sounds={this.props.data}
