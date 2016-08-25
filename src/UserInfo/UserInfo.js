@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class UserInfo extends Component {
-  render() {
-    return(
-      <div className={this.props.style}>
-        <div id='user'>{this.props.userName}</div>
-        <div id='title' className='truncate'>{this.props.title}</div>
-      </div>
-    )
-  }
+const UserInfo = (props) => {
+  return(
+    <div className={props.style}>
+      <div id='user'>{props.userName}</div>
+      <div id='title' className='truncate'>{props.title}</div>
+    </div>
+  )
 }
 
 export default UserInfo
