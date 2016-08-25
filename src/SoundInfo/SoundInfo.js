@@ -18,7 +18,7 @@ const SoundInfo = (props) => {
         <p>{loc}</p>
         <p>{data}</p>
         <p>{czas || 'Czas:'}</p>
-        <p>{autor}</p>
+        <p>{autor || 'Autor Nagrania:'}</p>
         <p>{gear}</p>
       </div>
       <div className={props.long ? 'long' : 'hide'}>
