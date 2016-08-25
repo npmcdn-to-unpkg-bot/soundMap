@@ -1,15 +1,28 @@
 .SoundInfo {
   position: absolute;
-  top: 80px;
-  left: 10px;
+  top: 75px;
+  right: 0;
   z-index: 1;
-  max-width: 400px;
-  max-height: 200px;
+  width: 355px;
+  height: 75px;
   overflow: auto;
-  border-radius: 5px;
   background-color: white;
   padding: 10px;
   font-family: 'Yantramanav', sans-serif;
-  font-size: 12px;
-  box-shadow: 3px 8px 6px -6px black;
+  font-size: 11px;
+  background-color: #ffffdd;
+  background: linear-gradient(to left, #ffeecc, #fff1d1);
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.SoundInfo p {
+  margin: 2px;
+  border-bottom: 1px dotted lightGrey;
+}
+
+@media screen and (max-width: 640px) {
+  .SoundInfo {
+    right: 0px;
+    width: calc(100% - 20px);
+  }
 }
