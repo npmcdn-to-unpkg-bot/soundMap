@@ -19,8 +19,8 @@ class SoundList extends Component {
       containsFilteredText
       ? <li
           className={this.props.selectedSound === index
-            ? 'Lista-Item Item-seleted clearfix'
-            : 'Lista-Item clearfix'}
+            ? 'Lista-Item Item-seleted'
+            : 'Lista-Item'}
           key={index}
           id={'snd' + index}
           onClick={this.handleClick.bind(this,index)}>
