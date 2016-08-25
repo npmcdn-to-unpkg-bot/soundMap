@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../Header/Header'
+import SoundInfo from '../SoundInfo/SoundInfo'
 import SoundMap from '../SoundMap/SoundMap'
 import SoundList from '../SoundList/SoundList'
 
@@ -38,6 +39,7 @@ class App extends Component {
         <Header
           onFilter={this.onFilter}
           soundId={getSoundId(sound)} />
+        <SoundInfo description={sound.description} />
         <SoundMap
           zoom={this.state.zoom}
           sounds={this.props.data}
