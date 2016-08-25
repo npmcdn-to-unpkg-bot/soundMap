@@ -10,6 +10,7 @@ const SoundInfo = (props) => {
   const czas = fullDesc.filter(getOnly('czas'))[0]
   const gear = fullDesc.filter(getOnly('rekorder'))[0]
   const descr = fullDesc.filter(getOnly('opis'))[0]
+  const autor = fullDesc.filter(getOnly('autor'))[0]
   return(
     <div className='SoundInfo'>
       <InfoButton onClick={props.handleInfoClick.bind(this)} />
@@ -17,10 +18,11 @@ const SoundInfo = (props) => {
         <p>{loc}</p>
         <p>{data}</p>
         <p>{czas || 'Czas:'}</p>
+        <p>{autor}</p>
         <p>{gear}</p>
       </div>
       <div className={props.long ? 'long' : 'hide'}>
-        <p>{descr}</p>
+        <p>{descr.slice(5)}</p>
       </div>
     </div>
   )
